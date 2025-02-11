@@ -6,7 +6,7 @@ import { FiMenu, FiX, FiDownload } from 'react-icons/fi';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ['home', 'about', 'skills', 'projects',"githubStats", 'contact' ];
+  const navItems = ['home', 'about', 'skills', 'projects', 'githubStats', 'contact'];
 
   return (
     <nav className="bg-gray-900/95 text-white p-4 fixed w-full top-0 shadow-md z-50 backdrop-blur-md">
@@ -32,6 +32,8 @@ const Navbar = () => {
                 to={item} 
                 smooth={true} 
                 duration={500} 
+                offset={-80}
+                spy={true}
                 className="cursor-pointer px-3 py-2 flex items-center transition-colors duration-300 hover:text-blue-400"
                 activeClass="text-blue-400"
               >
@@ -45,18 +47,19 @@ const Navbar = () => {
               </Link>
             </motion.li>
           ))}
-          {/* Download Resume Button */}
+          {/* Updated Resume Button */}
           <motion.li
             whileHover={{ scale: 1.05 }}
             className="ml-4"
           >
             <a
-              href="/resume.pdf"
-              download
+              href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67a30a6df97830ef5e980c79"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-green-600 rounded-lg hover:bg-green-700 transition-colors"
             >
               <FiDownload className="text-lg" />
-              Resume
+              View Resume
             </a>
           </motion.li>
         </ul>
@@ -86,6 +89,8 @@ const Navbar = () => {
                     to={item}
                     smooth={true}
                     duration={500}
+                    offset={-80}
+                    spy={true}
                     onClick={() => setIsOpen(false)}
                     className="block py-2 text-lg hover:text-blue-400 transition-colors"
                     activeClass="text-blue-400"
@@ -94,18 +99,19 @@ const Navbar = () => {
                   </Link>
                 </motion.li>
               ))}
-              {/* Mobile Download Button */}
+              {/* Mobile Resume Button */}
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 className="w-full text-center"
               >
                 <a
-                  href="/resume.pdf"
-                  download
+                  href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67a30a6df97830ef5e980c79"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-2 text-lg bg-green-600 hover:bg-green-700 transition-colors"
                 >
                   <FiDownload className="text-lg" />
-                  Download Resume
+                  View Resume
                 </a>
               </motion.li>
             </ul>

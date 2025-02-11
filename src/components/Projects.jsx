@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import ecommerceImage from "../assets/Ecommerce Image.png";
 
 const Projects = () => {
   const projects = [
@@ -9,7 +10,7 @@ const Projects = () => {
       tech: ["HTML5", "CSS3", "JavaScript"],
       github: "https://github.com/Kajaltiwari892/Ecommerce-A",
       demo: "https://kajaltiwari892.github.io/Ecommerce-A/",
-      image: "Ecommerce Image.png"
+      image: ecommerceImage,
     }
   ];
 
@@ -30,11 +31,11 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
         >
-          My Project...!🚀
+          My Projects 🚀
         </motion.h2>
 
         <div className="flex justify-center">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
@@ -57,75 +58,55 @@ const Projects = () => {
                 />
               </motion.div>
 
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Fixed gradient overlay with pointer-events-none */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-              <h3 className="text-3xl font-bold mb-6 text-blue-400 text-center">{project.title}</h3>
-              <p className="text-gray-300 mb-6 text-lg text-center">{project.description}</p>
-              
-              <div className="flex flex-wrap gap-2 mb-8 justify-center">
-                {project.tech.map((tech) => (
-                  <span 
-                    key={tech} 
-                    className={`px-4 py-2 rounded-full text-md ${
-                      tech === "HTML5" ? "bg-orange-500/20 text-orange-400" :
-                      tech === "CSS3" ? "bg-blue-500/20 text-blue-400" :
-                      "bg-yellow-500/20 text-yellow-400"
-                    }`}
+              {/* Content wrapper with relative positioning */}
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold mb-6 text-blue-400 text-center">{project.title}</h3>
+                <p className="text-gray-300 mb-6 text-lg text-center">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-8 justify-center">
+                  {project.tech.map((tech) => (
+                    <span 
+                      key={tech} 
+                      className={`px-4 py-2 rounded-full text-md ${
+                        tech === "HTML5" ? "bg-orange-500/20 text-orange-400" :
+                        tech === "CSS3" ? "bg-blue-500/20 text-blue-400" :
+                        "bg-yellow-500/20 text-yellow-400"
+                      }`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-6 justify-center">
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className="flex items-center gap-2 px-6 py-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors text-lg cursor-pointer"
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex gap-6 justify-center">
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  className="flex items-center gap-2 px-6 py-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors text-lg cursor-pointer"
-                >
-                  <FiGithub className="text-xl" />
-                  GitHub
-                </motion.a>
-                <motion.a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-lg cursor-pointer"
-                >
-                  <FiExternalLink className="text-xl" />
-                  Live Demo
-                </motion.a>
+                    <FiGithub className="text-xl" />
+                    GitHub
+                  </motion.a>
+                  <motion.a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-lg cursor-pointer"
+                  >
+                    <FiExternalLink className="text-xl" />
+                    Live Demo
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Floating particles */}
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white/50 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            initial={{ y: 0, opacity: 0 }}
-            animate={{
-              y: [0, -40, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 4,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
       </div>
     </section>
   );
