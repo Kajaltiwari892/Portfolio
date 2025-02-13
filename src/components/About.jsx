@@ -65,7 +65,7 @@ const About = () => {
           >
             <div className="relative">
               <motion.img
-                src="https://cdn2.stylecraze.com/wp-content/uploads/2013/05/Most-Beautiful-Women-In-India.jpg.webp"
+                src="ProfilePic.jpg"
                 alt="Kajal Tiwari"
                 className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-gray-800 shadow-2xl"
                 whileHover={{ scale: 1.05 }}

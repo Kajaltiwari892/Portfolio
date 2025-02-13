@@ -116,9 +116,9 @@ const Home = () => {
         >
           <div className="relative">
             <img 
-              src="https://cdn2.stylecraze.com/wp-content/uploads/2013/05/Most-Beautiful-Women-In-India.jpg.webp" 
+              src="ProfilePic.jpg" 
               alt="Kajal Verma" 
-              className="rounded-full w-96 h-96 object-cover border-8 border-gray-800 shadow-2xl"
+              className="rounded-full w-96 h-100 object-cover border-8 border-gray-800 shadow-2xl"
             />
             <div className="absolute inset-0 rounded-full border-4 border-blue-400 animate-pulse"></div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gray-800 px-6 py-2 rounded-full shadow-lg">
