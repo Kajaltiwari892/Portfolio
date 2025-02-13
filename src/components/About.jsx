@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ecommerceImage from "../assets/ProfilePic.jpg";
+import Image from "../assets/ProfilePic.jpg";
 const About = () => {
   return (
     <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-gray-900 text-white relative overflow-hidden">
@@ -66,7 +66,7 @@ const About = () => {
           >
             <div className="relative">
               <motion.img
-                src="ProfilePic.jpg"
+                src={Image}
                 alt="Kajal Tiwari"
                 className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-gray-800 shadow-2xl"
                 whileHover={{ scale: 1.05 }}

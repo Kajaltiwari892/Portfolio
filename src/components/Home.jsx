@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import Particles from "./Particles";
 import { TypeAnimation } from 'react-type-animation';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
-import ecommerceImage from "../assets/ProfilePic.jpg";
+import Image from "../assets/ProfilePic.jpg";
 
 const Home = () => {
   const socialLinks = {
@@ -117,8 +117,8 @@ const Home = () => {
         >
           <div className="relative">
             <img 
-              src="ProfilePic.jpg" 
-              alt="Kajal Verma" 
+              src={Image}
+              alt="Kajal Tiwari" 
               className="rounded-full w-96 h-100 object-cover border-8 border-gray-800 shadow-2xl"
             />
             <div className="absolute inset-0 rounded-full border-4 border-blue-400 animate-pulse"></div>
