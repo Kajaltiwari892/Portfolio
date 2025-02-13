@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Particles from "./Particles";
 import { TypeAnimation } from 'react-type-animation';
-import { FiGithub, FiLinkedin, FiDribbble } from 'react-icons/fi';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import ecommerceImage from "../assets/ProfilePic.jpg";
 
 const Home = () => {
   const socialLinks = {

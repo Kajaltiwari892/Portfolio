@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ecommerceImage from "../assets/ProfilePic.jpg";
 const About = () => {
   return (
     <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-gray-900 text-white relative overflow-hidden">
