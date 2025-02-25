@@ -11,13 +11,13 @@ const Navbar = () => {
   const handleResumeDownload = () => {
     // Open the URL in a new tab
     window.open(
-      'https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67bdbc64dae27d0d641405c4',
+      'https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67bdd6d13bc96bedb0a1e187',
       '_blank'
     );
     
     // Trigger PDF download
     const link = document.createElement('a');
-    link.href = '/Resume.pdf.pdf';
+    link.href = '/MyResume.pdf';
     link.download = 'Kajal Tiwari Resume';
     document.body.appendChild(link);
     link.click();
