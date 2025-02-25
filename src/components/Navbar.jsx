@@ -8,6 +8,22 @@ const Navbar = () => {
 
   const navItems = ['home', 'about', 'skills', 'projects', 'githubStats', 'contact'];
 
+  const handleResumeDownload = () => {
+    // Open the URL in a new tab
+    window.open(
+      'https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67bdbc64dae27d0d641405c4',
+      '_blank'
+    );
+    
+    // Trigger PDF download
+    const link = document.createElement('a');
+    link.href = '/Resume.pdf.pdf';
+    link.download = 'Kajal Tiwari Resume';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className="bg-gray-900/95 text-white p-4 fixed w-full top-0 shadow-md z-50 backdrop-blur-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -52,15 +68,13 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="ml-4"
           >
-            <a
-              href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67a30a6df97830ef5e980c79"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleResumeDownload}
               className="flex items-center gap-2 px-4 py-2 bg-green-600 rounded-lg hover:bg-green-700 transition-colors"
             >
               <FiDownload className="text-lg" />
               View Resume
-            </a>
+            </button>
           </motion.li>
         </ul>
 
@@ -104,15 +118,13 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 className="w-full text-center"
               >
-                <a
-                  href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67a30a6df97830ef5e980c79"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 py-2 text-lg bg-green-600 hover:bg-green-700 transition-colors"
+                <button
+                  onClick={handleResumeDownload}
+                  className="w-full flex items-center justify-center gap-2 py-2 text-lg bg-green-600 hover:bg-green-700 transition-colors"
                 >
                   <FiDownload className="text-lg" />
                   View Resume
-                </a>
+                </button>
               </motion.li>
             </ul>
           </motion.div>

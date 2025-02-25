@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub } from "react-icons/fa";
-import { SiRedux, SiTailwindcss } from "react-icons/si";
+import { SiRedux, SiTailwindcss, SiBootstrap,} from "react-icons/si";
 import { VscCode } from "react-icons/vsc"; 
 
 const Skills = () => {
@@ -11,6 +11,7 @@ const Skills = () => {
     { name: "React", icon: <FaReact />, color: "text-blue-400" },
     { name: "Redux", icon: <SiRedux />, color: "text-purple-500" },
     { name: "Tailwind", icon: <SiTailwindcss />, color: "text-cyan-400" },
+    { name: "Bootstrap", icon: <SiBootstrap />, color: "text-cyan-400" },
     { name: "GitHub", icon: <FaGithub />, color: "text-gray-200" },
     { name: "VSCode", icon: <VscCode />, color: "text-blue-500" },
   ];

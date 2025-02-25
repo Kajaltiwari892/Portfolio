@@ -8,8 +8,8 @@ const Projects = () => {
       title: "E-commerce Website",
       description: "A responsive online store built with pure HTML, CSS, and JavaScript",
       tech: ["HTML5", "CSS3", "JavaScript"],
-      github: "https://github.com/Kajaltiwari892/Ecommerce-A",
-      demo: "https://kajaltiwari892.github.io/Ecommerce-A/",
+      github: "https://github.com/Kajaltiwari892/Apna-Bazar",
+      demo: "https://kajaltiwari892.github.io/Apna-Bazar/",
       image: ecommerceImage,
     }
   ];
