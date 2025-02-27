@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import ecommerceImage from "../assets/Ecommerce Image.png";
+import quizAppImage from "../assets/QuizApp.png"; 
 
 const Projects = () => {
   const projects = [
@@ -11,6 +12,14 @@ const Projects = () => {
       github: "https://github.com/Kajaltiwari892/Apna-Bazar",
       demo: "https://kajaltiwari892.github.io/Apna-Bazar/",
       image: ecommerceImage,
+    },
+    {
+      title: "Quiz App",
+      description: "Interactive quiz application with dynamic questions and score tracking",
+      tech: ["React", "Tailwind CSS", "Framer-motion" , "React-bits" , "many other tools"],
+      github: "https://github.com/Kajaltiwari892/Quiz-App",
+      demo: "https://quiz-app-woad-iota.vercel.app/",
+      image: quizAppImage,
     }
   ];
 
@@ -34,7 +43,7 @@ const Projects = () => {
           My Projects 🚀
         </motion.h2>
 
-        <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <motion.div
               key={project.title}
@@ -43,7 +52,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gray-800 rounded-xl p-8 shadow-2xl relative overflow-hidden group w-full max-w-4xl"
+              className="bg-gray-800 rounded-xl p-8 shadow-2xl relative overflow-hidden group w-full"
             >
               {/* Website Screenshot */}
               <motion.div
@@ -53,15 +62,13 @@ const Projects = () => {
               >
                 <img 
                   src={project.image} 
-                  alt="E-commerce Website Screenshot" 
+                  alt={`${project.title} Screenshot`}
                   className="w-full h-auto object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
                 />
               </motion.div>
 
-              {/* Fixed gradient overlay with pointer-events-none */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-              {/* Content wrapper with relative positioning */}
               <div className="relative z-10">
                 <h3 className="text-3xl font-bold mb-6 text-blue-400 text-center">{project.title}</h3>
                 <p className="text-gray-300 mb-6 text-lg text-center">{project.description}</p>
@@ -73,6 +80,8 @@ const Projects = () => {
                       className={`px-4 py-2 rounded-full text-md ${
                         tech === "HTML5" ? "bg-orange-500/20 text-orange-400" :
                         tech === "CSS3" ? "bg-blue-500/20 text-blue-400" :
+                        tech === "React" ? "bg-blue-500/20 text-blue-400" :
+                        tech === "Tailwind CSS" ? "bg-teal-500/20 text-teal-400" :
                         "bg-yellow-500/20 text-yellow-400"
                       }`}
                     >
