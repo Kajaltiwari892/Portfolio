@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleResumeDownload = () => {
     // Open the URL in a new tab
     window.open(
-      'https://drive.google.com/file/d/1QbZF9ZCw0sdL8pDt738MWiMwvyjM7Qrj/view?usp=sharing',
+      'https://drive.google.com/file/d/1zzfevqO34UJGrOpLHM5J96DeqCKt3C3c/view?usp=sharing',
       '_blank'
     );
     
