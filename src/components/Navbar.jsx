@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleResumeDownload = () => {
     // Open the URL in a new tab
     window.open(
-      'https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67bdd6d13bc96bedb0a1e187',
+      'https://drive.google.com/file/d/1QbZF9ZCw0sdL8pDt738MWiMwvyjM7Qrj/view?usp=sharing',
       '_blank'
     );
     

@@ -47,7 +47,7 @@ const About = () => {
             </p>
 
             <motion.a
-              href="${https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67bdd6d13bc96bedb0a1e187}/MyResume.pdf"
+              href="${https://drive.google.com/file/d/1QbZF9ZCw0sdL8pDt738MWiMwvyjM7Qrj/view?usp=sharing}/Resume.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
