@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import Particles from "./Particles";
 import { TypeAnimation } from 'react-type-animation';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
-import Image from "../assets/ProfilePic.jpg";
+import Image from "../assets/ProfilePicNew.jpg";
 
 const Home = () => {
   const socialLinks = {
