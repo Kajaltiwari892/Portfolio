@@ -2,16 +2,18 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import ecommerceImage from "../assets/Ecommerce Image.png";
 import quizAppImage from "../assets/QuizApp.png"; 
+import fizzi from "../assets/fizzi.png";
+
 
 const Projects = () => {
   const projects = [
-    {
-      title: "E-commerce Website",
-      description: "A responsive online store built with pure HTML, CSS, and JavaScript",
-      tech: ["HTML5", "CSS3", "JavaScript"],
-      github: "https://github.com/Kajaltiwari892/Apna-Bazar",
-      demo: "https://kajaltiwari892.github.io/Apna-Bazar/",
-      image: ecommerceImage,
+     {
+      title: "Fizzi – 3D Product Showcase Website",
+      description:"A sleek 3D product website .It delivers scroll-triggered animations, dynamic CMS content, and a smooth interactive user experience.",
+      tech:["Next.js", "TypeScript", "Three.js", "GSAP", " Prismic"],
+      github:"https://github.com/Kajaltiwari892/Fizzi",
+      demo:"https://fizzi-demo.vercel.app/",
+      image: fizzi 
     },
     {
       title: "Quiz App",
@@ -20,7 +22,16 @@ const Projects = () => {
       github: "https://github.com/Kajaltiwari892/Quiz-App",
       demo: "https://quiz-app-woad-iota.vercel.app/",
       image: quizAppImage,
+    },
+    {
+      title: "E-commerce Website",
+      description: "A responsive online store built with pure HTML, CSS, and JavaScript",
+      tech: ["HTML5", "CSS3", "JavaScript"],
+      github: "https://github.com/Kajaltiwari892/Apna-Bazar",
+      demo: "https://kajaltiwari892.github.io/Apna-Bazar/",
+      image: ecommerceImage,
     }
+   
   ];
 
   return (
