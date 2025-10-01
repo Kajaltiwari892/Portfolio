@@ -12,7 +12,6 @@ const Navbar = () => {
     // Open the URL in a new tab
     window.open(
       'https://drive.google.com/file/d/1pgt14BqIBGCIDkkAo2taqpdsYh8999eK/view?usp=sharing',
-      '_blank'
     );
     
     // Trigger PDF download
@@ -135,3 +134,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
